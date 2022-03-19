@@ -76,15 +76,15 @@ a:visited:hover {
 }
 
 .profile-picture-container {
+  aspect-ratio: 1;
   border-radius: 9999px;
-  overflow: hidden;
   height: 100%;
+  overflow: hidden;
 }
 
 .profile-picture-container .profile-picture {
   height: 100%;
   object-fit: contain;
-  width: 100%;
 }
 
 .profile-information-container {

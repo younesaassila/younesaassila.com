@@ -1,0 +1,10 @@
+{
+  "bio": {
+    "message": "Student and Computer Science Enthusiast",
+    "description": "Small public summary about myself"
+  },
+  "social-email": {
+    "message": "Email",
+    "description": "Name of social button linking to my email address"
+  }
+}

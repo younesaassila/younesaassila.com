@@ -9,8 +9,19 @@
   --hover-transition-duration: 50ms;
 }
 
-* {
+html {
+  font-size: 100%;
+}
+
+*,
+*::before,
+*::after {
   box-sizing: border-box;
+}
+
+* {
+  /* Source: https://stackoverflow.com/questions/45049873/how-to-remove-the-blue-highlight-of-button-on-mobile */
+  -webkit-tap-highlight-color: transparent;
 }
 
 body {
@@ -76,15 +87,15 @@ a:visited:hover {
 }
 
 .profile-picture-container {
+  aspect-ratio: 1;
   border-radius: 9999px;
-  overflow: hidden;
   height: 100%;
+  overflow: hidden;
 }
 
 .profile-picture-container .profile-picture {
   height: 100%;
   object-fit: contain;
-  width: 100%;
 }
 
 .profile-information-container {

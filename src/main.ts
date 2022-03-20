@@ -9,7 +9,7 @@ document.documentElement.setAttribute("lang", locale.identifier)
 
 const bioElement = document.getElementById("bio") as HTMLHeadingElement
 const socialEmailElement = document.getElementById(
-  "social-email"
+  "ya-social-email"
 ) as HTMLSpanElement
 
 bioElement.textContent = locale.getMessage("bio")

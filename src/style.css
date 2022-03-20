@@ -7,6 +7,8 @@
   --brand-background-color-hover: #1c435f;
 
   --hover-transition-duration: 50ms;
+
+  --profile-picture-size: 250px;
 }
 
 html {
@@ -83,19 +85,20 @@ a:visited:hover {
   display: grid;
   gap: 3rem;
   grid-template-columns: 1fr auto;
-  height: 250px;
+  grid-template-rows: 1fr;
 }
 
 .profile-picture-container {
-  aspect-ratio: 1;
   border-radius: 9999px;
-  height: 100%;
+  height: var(--profile-picture-size);
   overflow: hidden;
+  width: var(--profile-picture-size);
 }
 
 .profile-picture-container .profile-picture {
   height: 100%;
   object-fit: contain;
+  width: 100%;
 }
 
 .profile-information-container {
@@ -141,13 +144,20 @@ a:visited:hover {
 }
 
 @media only screen and (max-width: 960px) {
+  :root {
+    --profile-picture-size: 180px;
+  }
+
   .profile {
     gap: 2rem;
-    height: 180px;
   }
 }
 
 @media only screen and (max-width: 780px) {
+  :root {
+    --profile-picture-size: 200px;
+  }
+
   .button {
     font-size: 14pt;
     padding: 0.75rem 1.5rem;
@@ -155,20 +165,15 @@ a:visited:hover {
 
   .profile {
     gap: 3rem;
-    grid-template-columns: auto;
+    grid-template-columns: 1fr;
     grid-template-rows: 1fr auto;
-    height: 100%;
   }
 
   .profile-picture-container {
     align-items: center;
-    border-radius: 9999px;
     display: flex;
-    height: 200px;
     justify-content: center;
     margin: auto;
-    overflow: hidden;
-    width: max-content;
   }
 
   .profile-information {
@@ -176,12 +181,16 @@ a:visited:hover {
   }
 
   .profile-information .socials li {
-    margin-left: 0.37rem;
-    margin-right: 0.37rem;
+    margin-left: 0.4rem;
+    margin-right: 0.4rem;
   }
 }
 
 @media only screen and (max-width: 630px) {
+  :root {
+    --profile-picture-size: min(180px, 70vw);
+  }
+
   .button {
     border-radius: 12px;
     font-size: 1.25rem;
@@ -192,12 +201,6 @@ a:visited:hover {
   .profile {
     gap: 2rem;
     width: 90vw;
-  }
-
-  .profile-picture-container {
-    border-radius: 9999px;
-    height: min(180px, 70vw);
-    overflow: hidden;
   }
 
   .profile-information {

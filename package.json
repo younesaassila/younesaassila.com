@@ -1,6 +1,6 @@
 {
   "name": "aassila.com",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "My personal webpage where you can find my projects and contact information.",
   "scripts": {
     "dev": "vite",

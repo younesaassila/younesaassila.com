@@ -1,0 +1,7 @@
+# Disable directory listings
+Options -Indexes
+
+RewriteEngine On
+# Redirect colloscope.aassila.com to colloscope.com
+RewriteCond %{HTTP_HOST} ^colloscope\.aassila\.com$ [NC]
+RewriteRule (.*) https://www.colloscope.com/$1 [R,L]

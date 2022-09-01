@@ -1,5 +1,5 @@
 # Disable directory listings
-Options -Indexes 
+Options -Indexes
 
 RewriteEngine On
 # Redirect colloscope.aassila.com to colloscope.com

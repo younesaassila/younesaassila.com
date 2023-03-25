@@ -1,6 +1,6 @@
 {
   "name": "aassila.com",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "My personal webpage where you can find my projects and contact information.",
   "scripts": {
     "dev": "vite",
@@ -26,9 +26,9 @@
   },
   "homepage": "https://github.com/younesaassila/aassila.com#readme",
   "devDependencies": {
-    "prettier": "^2.7.1",
+    "prettier": "^2.8.7",
     "prettier-plugin-css-order": "^1.3.0",
-    "typescript": "^4.8.2",
+    "typescript": "^4.9.5",
     "vite": "^2.9.15"
   },
   "private": true

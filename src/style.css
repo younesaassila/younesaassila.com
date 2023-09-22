@@ -49,6 +49,7 @@ a,
 a:visited {
   color: var(--brand-color);
   text-decoration: none;
+  cursor: pointer;
   transition: color var(--hover-transition-duration);
 }
 
@@ -58,26 +59,17 @@ a:visited:hover {
 }
 
 .button {
+  display: inline-block;
   padding: 0.5rem 1rem;
   border-radius: 9999px;
   background-color: var(--brand-background-color);
+  color: var(--brand-color);
   cursor: pointer;
   transition: background-color var(--hover-transition-duration);
 }
 
-.button > p,
-.button > a {
-  color: var(--brand-color);
-  transition: color var(--hover-transition-duration);
-}
-
 .button:hover {
   background-color: var(--brand-background-color-hover);
-  color: var(--brand-color-hover);
-}
-
-.button:hover > p,
-.button:hover > a {
   color: var(--brand-color-hover);
 }
 

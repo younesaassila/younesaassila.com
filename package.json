@@ -1,7 +1,24 @@
 {
   "name": "aassila.com",
-  "version": "1.0.5",
+  "version": "1.0.6",
+  "private": true,
   "description": "My personal webpage where you can find my projects and contact information.",
+  "keywords": [
+    "vite",
+    "typescript",
+    "portfolio",
+    "website"
+  ],
+  "homepage": "https://github.com/younesaassila/aassila.com#readme",
+  "bugs": {
+    "url": "https://github.com/younesaassila/aassila.com/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/younesaassila/aassila.com.git"
+  },
+  "license": "UNLICENSED",
+  "author": "Younes Aassila",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -9,27 +26,10 @@
     "lint": "prettier --check .",
     "lint:fix": "prettier --write ."
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/younesaassila/aassila.com.git"
-  },
-  "keywords": [
-    "vite",
-    "typescript",
-    "portfolio",
-    "website"
-  ],
-  "author": "Younes Aassila",
-  "license": "UNLICENSED",
-  "bugs": {
-    "url": "https://github.com/younesaassila/aassila.com/issues"
-  },
-  "homepage": "https://github.com/younesaassila/aassila.com#readme",
   "devDependencies": {
-    "prettier": "^2.8.7",
-    "prettier-plugin-css-order": "^1.3.0",
-    "typescript": "^4.9.5",
-    "vite": "^2.9.15"
-  },
-  "private": true
+    "prettier": "^2.8.8",
+    "prettier-plugin-css-order": "^1.3.1",
+    "typescript": "^5.2.2",
+    "vite": "^4.4.9"
+  }
 }

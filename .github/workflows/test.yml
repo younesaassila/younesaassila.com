@@ -1,15 +1,21 @@
 name: Build and Test
 on: [push, pull_request]
 jobs:
-  build:
+  build-and-test:
+    concurrency: ci-${{ github.ref }}
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout
+        uses: actions/checkout@v4
+
       - name: Install dependencies
-        run: npm install
+        run: npm ci
+
       - name: Check types
         run: npm run check
+
       - name: Lint code
         run: npm run lint
+
       - name: Build app
         run: npm run build

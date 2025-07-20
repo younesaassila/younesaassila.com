@@ -9,7 +9,13 @@ export default class Locale {
     this.messages = messages
   }
 
-  getMessage(message: string) {
+  getMessage(message: string): string {
+    if (!this.messages[message]) {
+      console.error(
+        `Message "${message}" not found in locale "${this.identifier}"`
+      )
+      return message // Fallback to the message key if not found
+    }
     return this.messages[message].message
   }
 }

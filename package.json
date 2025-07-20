@@ -23,7 +23,7 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "check": "tsc --noEmit",
+    "type-check": "tsc --noEmit",
     "lint": "prettier --check .",
     "lint:fix": "prettier --write ."
   },

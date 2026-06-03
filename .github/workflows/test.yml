@@ -1,29 +1,31 @@
 name: Build and Test
+
 on:
   push:
-    branches:
-      - "**"
-    tags-ignore:
-      - "**"
+    branches: ["**"]
+    tags-ignore: ["**"]
   pull_request:
-    branches:
-      - "**"
+    types: [opened, synchronize, reopened, ready_for_review]
+    branches: ["**"]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   build-and-test:
-    concurrency: ci-${{ github.ref }}
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
+      - name: Checkout repository
+        uses: actions/checkout@v6
       - name: Install dependencies
         run: npm ci
-
-      - name: Check types
-        run: npm run type-check
-
-      - name: Lint code
+      - name: Run linter
         run: npm run lint
-
-      - name: Build app
+      - name: Run type checker
+        run: npm run type-check
+      - name: Build
         run: npm run build

@@ -12,17 +12,22 @@
 }
 
 html {
+  box-sizing: border-box;
   font-size: 100%;
 }
 
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+  box-sizing: inherit;
 }
 
-* {
-  /* Source: https://stackoverflow.com/questions/45049873/how-to-remove-the-blue-highlight-of-button-on-mobile */
+/* https://stackoverflow.com/a/45050338 */
+input,
+textarea,
+button,
+select,
+a {
   -webkit-tap-highlight-color: transparent;
 }
 
